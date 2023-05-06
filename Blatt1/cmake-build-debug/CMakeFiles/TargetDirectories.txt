@@ -1,3 +1,0 @@
-C:/Users/ALI/prog2-test/Blatt1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/ALI/prog2-test/Blatt1/cmake-build-debug/CMakeFiles/Blatt1.dir
-C:/Users/ALI/prog2-test/Blatt1/cmake-build-debug/CMakeFiles/edit_cache.dir
