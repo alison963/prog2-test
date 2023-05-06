@@ -3,6 +3,7 @@
 using namespace std;
 
 int numOnMac(int x) {
+    cout << "ich versuche hier diese Funktion zu ändern" <<endl;
     return x +1;
 }
 
