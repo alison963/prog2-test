@@ -1,5 +1,5 @@
 #include "Ship.h"
-
+#include "Missile.h"
 #include "Constants.h"
 // TODO Aufgabe 7:
 //  Warum ist die folgende using-Anweisung hier unnötig?
@@ -27,7 +27,11 @@ namespace GameObjects {
     //  Bei einem Treffer, markiert `missile` entsprechend.
 
     bool Ship::checkAndUpdateIncomingMissile(Missile &missile) {
-        if (atCoordinates(missile))
+        if (atCoordinates(missile)) {
+            missile.hitSomething();
+            ++num;
+            return true;
+        }
         return false;
     }
     bool Ship::isDestroyed() const
@@ -35,10 +39,11 @@ namespace GameObjects {
         // TODO Aufgabe 4:
         //  Prüft, ob alle Felder des Schiffs einmal getroffen wurden.
         //  (Tipp: Es können nie mehrere Raketen auf die gleichen Koordinaten geschossen werden.)
+        if (size == num)
+            return true;
+
         return false;
-        /*
-         ???
-         */
+
     }
 
 

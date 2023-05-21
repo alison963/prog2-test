@@ -12,15 +12,13 @@ using GameObjects::PlayerSea;
 
 int main()
 {
-//    if (testPassed()) {
-//        vector<PlayerSea> playerSeas;
-//        initializePlayerSeasWithShips(playerSeas);
-//
-//        gameLoop(playerSeas);
-//    }
-Sea::Object obj1(Sea::Coordinates(0,1),3,Sea::Orientation::X);
-Sea::Object obj2(Sea::Coordinates(0,0),3,Sea::Orientation::Y);
+    if (testPassed()) {
+        vector<PlayerSea> playerSeas;
+        initializePlayerSeasWithShips(playerSeas);
 
-    if (obj1.intersectsWith(obj2)) std::cout << "true";
+        gameLoop(playerSeas);
+    }
+
+
 return 0;
 }

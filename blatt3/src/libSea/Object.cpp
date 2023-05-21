@@ -22,7 +22,7 @@ namespace Sea {
         if (orientationAsInt == 0) {
             for (int i = 0; i <= size; ++i) {
                 if (coordinates.samePositionAs(x + i,y )){
-                    cout << "Objekt liegt hier" << std::endl;
+//                    cout << "Objekt liegt hier" << std::endl;
                     return true;
                 }
             }
@@ -30,12 +30,12 @@ namespace Sea {
         else if (orientationAsInt ==1){
             for (int i = 0; i <= size; ++i) {
                 if (coordinates.samePositionAs(x ,y + i)){
-                    cout << "Objekt liegt hier" << std::endl;
+//                    cout << "Objekt liegt hier" << std::endl;
                     return true;
                 }
             }
         }
-        cout << "kein Objekt liegt hier" << std::endl;
+//        cout << "kein Objekt liegt hier" << std::endl;
         return false;
 
     }

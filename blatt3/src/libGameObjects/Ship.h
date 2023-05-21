@@ -9,6 +9,8 @@
 namespace GameObjects {
 
     class Ship : public Sea::Object {
+    private:
+        unsigned int num = 0;
 
     public:
         using Sea::Object::Object; // inherit constructors with identical parameters
@@ -25,7 +27,7 @@ namespace GameObjects {
 
 // TODO Aufgabe 4:
 //  Entfernt die Kommentar-Zeichen (//), wenn Aufgabe 4 erledigt ist:
-// #define CLASS_SHIP_COMPLETE
+ #define CLASS_SHIP_COMPLETE
 
 
 #endif //BLATT3_SHIP_H
