@@ -25,10 +25,11 @@ namespace GameObjects {
     //  Definiert die Funktion `checkAndUpdateIncomingMissile(..)`.
     //  Nutzt die Funktionen von `Sea::Object`, um zu prüfen, ob die übergebene Rakete (`missile`) dieses Schiff trifft.
     //  Bei einem Treffer, markiert `missile` entsprechend.
-    /*
-     ???
-     */
 
+    bool Ship::checkAndUpdateIncomingMissile(Missile &missile) {
+        if (atCoordinates(missile))
+        return false;
+    }
     bool Ship::isDestroyed() const
     {
         // TODO Aufgabe 4:
@@ -39,5 +40,7 @@ namespace GameObjects {
          ???
          */
     }
+
+
 
 }

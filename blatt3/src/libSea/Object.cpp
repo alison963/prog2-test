@@ -21,7 +21,7 @@ namespace Sea {
         auto orientationAsInt = static_cast<unsigned int> (orientation);
         if (orientationAsInt == 0) {
             for (int i = 0; i <= size; ++i) {
-                if (coordinates.samePositionAs(x,y + i)){
+                if (coordinates.samePositionAs(x + i,y )){
                     cout << "Objekt liegt hier" << std::endl;
                     return true;
                 }
@@ -29,7 +29,7 @@ namespace Sea {
         }
         else if (orientationAsInt ==1){
             for (int i = 0; i <= size; ++i) {
-                if (coordinates.samePositionAs(x + i,y)){
+                if (coordinates.samePositionAs(x ,y + i)){
                     cout << "Objekt liegt hier" << std::endl;
                     return true;
                 }
@@ -44,9 +44,21 @@ namespace Sea {
     {
         // TODO Aufgabe 2:
         //  Nutzt die Funktion `atCoordinates(..)`, um zu bestimmen, ob sich dieses und das übergebene Objekt (`otherObject`) überschneiden.
-        Coordinates coo(x,y);
-        if (otherObject.atCoordinates(coo)) {
-            return true;
+        auto orientationAsInt = static_cast<unsigned int> (orientation);
+
+        if (orientationAsInt == 0) {
+            for (int i = 0; i < size; ++i) {
+                if (otherObject.atCoordinates(Coordinates(x + i,y))) {
+                    return true;
+                }
+            }
+        }
+        else if ( orientationAsInt == 1 ) {
+            for (int i = 0; i < size; ++i) {
+                if (otherObject.atCoordinates(Coordinates(x ,y + i))) {
+                    return true;
+                }
+            }
         }
         return false;
 

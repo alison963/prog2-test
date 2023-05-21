@@ -1,20 +1,17 @@
 #include <iostream>
-
 using namespace std;
-
-int numOnMac(int x) {
-
-    cout << "ich versuche hier diese " << x  <<endl;
-    return x + 20;
-}
+#include "Person.h"
+#include "Mensche.h"
 
 
 int main(){
-    cout << "Hello , World!" << endl;
-    cout << "this is a test from (i add this from mac) windows" <<endl;
-    cout << "does it makes problem if i did something here" << endl;
+    Person alip("ali","Ma",12);
+    Mensche ali(Person("ali","As",12),"Gf");
 
-    cout << numOnMac(5) << endl;
+
+    if (ali.sameName(alip)) {
+        cout << "samename" << endl;
+    }
 
     return 0;
 }
